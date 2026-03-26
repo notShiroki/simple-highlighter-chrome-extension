@@ -1,0 +1,36 @@
+/* research-highlighter/styles.css */
+/* ::highlight(research-highlight) {
+    background-color: #ffff00 !important;
+    color: black !important;
+  }
+   */
+
+ /* research-highlighter/styles.css */
+
+/* Base properties shared by all */
+::highlight(highlight-light),
+::highlight(highlight-medium),
+::highlight(highlight-heavy) {
+  color: inherit !important;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Variation 1: Light / Fast stroke */
+::highlight(highlight-light) {
+  background-color: rgba(255, 255, 0, 0.4) !important;
+  text-shadow: 0 0 1px rgba(255, 255, 0, 0.3);
+}
+
+/* Variation 2: Medium / Normal stroke */
+::highlight(highlight-medium) {
+  background-color: rgba(255, 255, 0, 0.7) !important;
+  text-shadow: 0 0 2px rgba(255, 230, 0, 0.6);
+}
+
+/* Variation 3: Heavy / Pause point / Wet ink */
+::highlight(highlight-heavy) {
+  background-color: rgba(255, 240, 0, 0.9) !important;
+  text-shadow: 0 0 3px rgba(255, 220, 0, 0.8);
+}

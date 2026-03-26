@@ -1,0 +1,42 @@
+{
+    "manifest_version": 3,
+    "name": "Research Highlighter",
+    "version": "1.3",
+    "description": "Highlight, save, and view text selections across tabs.",
+    "permissions": [
+      "contextMenus",
+      "activeTab",
+      "scripting",
+      "storage",
+      "sidePanel",
+      "tabs"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "action": {
+      "default_title": "Open Research Highlighter"
+    },
+    "side_panel": {
+      "default_path": "sidepanel.html"
+    },
+    "commands": {
+      "toggle-highlight": {
+        "suggested_key": {
+          "default": "Alt+H"
+        },
+        "description": "Highlight selected text"
+      }
+    },
+    "icons": {
+     
+    }
+  }
+  
